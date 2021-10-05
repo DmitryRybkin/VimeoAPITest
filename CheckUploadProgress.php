@@ -34,8 +34,6 @@ $uploadLink = $attempt['body']['upload']['upload_link'];
 var_dump($uploadLink);
 
 /**
- * Prepare data and make additional request via curl PHP for getting the Upload-Offset value
- *
  * Response:
  *
  * $uploadLink - 'https://europe-files.tus.vimeo.com/files/vimeo-prod-src-tus-eu/98218864e893d8efc60151b6bd05ed89'
@@ -82,6 +80,9 @@ var_dump($uploadLink);
  *
  */
 
+/**
+ * Prepare data and make additional request via curl PHP for getting the Upload-Offset value
+ */
 $curlOpts = [
     CURLOPT_CUSTOMREQUEST => 'HEAD',
     CURLOPT_HTTPHEADER => [
@@ -138,4 +139,3 @@ $curlInfo = curl_getinfo($curl);
 /**
  * Hope it will be helpful
  */
-
