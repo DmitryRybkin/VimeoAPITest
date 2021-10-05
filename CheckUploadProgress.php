@@ -26,7 +26,7 @@ $data['upload']['approach'] = 'tus';
 $data['upload']['size'] = $fileSize;
 
 /**
- * Make request and get the upload.link value for checking upload process
+ * Make request and get the upload.link value for checking upload progress
  * This step works fine and I get response with all correct data
  */
 $attempt = $vimeoClient->request($uri, $data, 'POST', true, []);
